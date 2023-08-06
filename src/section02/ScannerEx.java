@@ -13,6 +13,7 @@ public class ScannerEx {
 		int age;
 		double weight;
 		int itest;
+		int ites2t;
 		
 		System.out.println("이름, 주소, 나이, 체중을 빈칸으로 구분하여 순서대로 입력하세요.");
 		name = scan.next();
