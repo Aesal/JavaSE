@@ -17,7 +17,5 @@ public class Variable07 {
         float iFloat2 = 3.14f;
         int Iint3 = (int) iFloat2;
         System.out.println(Iint3);
-
-
     }
 }
