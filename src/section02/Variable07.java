@@ -6,5 +6,10 @@ public class Variable07 {
         byte iByte = 10;
         int iInt = iByte;
         System.out.println("iInt: " + iInt);
+
+        float iFloat = 10.1f;
+        double idouble = iFloat;
+
+
     }
 }
