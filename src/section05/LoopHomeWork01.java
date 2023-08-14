@@ -97,9 +97,10 @@ public class LoopHomeWork01 {
 	}
 
 	public static void Work04(int maxCount) {
-
+		//같은문장 반복이라 호출.
 		Work03(maxCount);
 
+		//4번
 		for (int i = 0; i <= maxCount; i++) {
 
 
