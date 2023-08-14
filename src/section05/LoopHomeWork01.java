@@ -13,12 +13,20 @@ package section05;
 public class LoopHomeWork01 {
 
     public static void main(String[] args) {
+    
+		int maxcount = 7;
 
-        int maxCount = 4;
+		Work01(maxcount);
+		System.out.println("-----------------------------------------");
 
-        Work01(maxCount);
-        Work02(maxCount);
-        Work03(maxCount);
+		Work02(maxcount);
+		System.out.println("-----------------------------------------");
+
+		Work03(maxcount);
+		System.out.println("-----------------------------------------");
+
+		Work04(maxcount);
+		System.out.println("-----------------------------------------");
 
 
     }
@@ -29,79 +37,81 @@ public class LoopHomeWork01 {
 
 
 
-  public static void Work01(int maxCount){
-      //1번
-      for (int i = 0; i <maxCount; i++) {
+	public static void Work01(int maxCount){
+		//1번
+		for (int i = 0; i <maxCount; i++) {
 
-          for (int j=0; j<=i; j++) {
-              System.out.print("*");
-          }
+			for (int j=0; j<=i; j++) {
+				System.out.print("*");
+			}
 
-          for (int k=maxCount; k>i; k--){
-              System.out.print(" ");
-          }
+			for (int k=maxCount; k>i; k--){
+				System.out.print("0");
+			}
 
-          System.out.println("");
-      } // end of for
+			System.out.println("");
+		} // end of for
+	}
 
-      System.out.println("-----------------------------------------");
-  }
+	public static void Work02(int maxCount) {
+		//2번
+		for (int i = 0; i < maxCount; i++) {
 
-    public static void Work02(int maxCount) {
-        //2번
-        for (int i = 0; i < maxCount; i++) {
+			for (int j = maxCount; j>i; j--) {
+				System.out.print("0");
+			}
 
-            for (int j = maxCount; j>i; j--) {
-                System.out.print(" ");
-            }
+			for (int k=0; k<=i; k++) {
+				System.out.print("*");
+			}
 
-            for (int k=0; k<=i; k++) {
-                System.out.print("*");
-            }
+			System.out.println("");
 
-            System.out.println("");
+		} // end of for
+	}
 
-        } // end of for
+	public static void Work03(int maxCount) {
 
-        System.out.println("-----------------------------------------");
-    }
+		//3번
+		for (int i = 0; i < maxCount; i++) {
 
-    public static void Work03(int maxCount) {
+			for (int j = maxCount; j>i; j--) {
+				System.out.print("0");
+			}
 
-        //3번
-        for (int i = 0; i < maxCount; i++) {
+			for (int j=0; j<=i; j++) {
+				System.out.print("*");
+			}
 
-            for (int j = maxCount; j>i; j--) {
-                System.out.print(" ");
-            }
+			for (int j=0; j<i; j++) {
+				System.out.print("*");
+			}
 
-            for (int j=0; j<=i; j++) {
-                System.out.print("*");
-            }
+			for (int j = maxCount; j>i; j--) {
+				System.out.print("0");
+			}
 
-            for (int j=0; j<i; j++) {
-                System.out.print("*");
-            }
-            System.out.println(" ");
+			System.out.println("");
 
-        } // end of for
-        System.out.println("-----------------------------------------");
-    }
+		} // end of for
+	}
 
-    public static void Work04(int maxCount) {
+	public static void Work04(int maxCount) {
 
-        for (int i = 0; i <= maxcount; i++) {
+		Work03(maxCount);
+
+		for (int i = 0; i <= maxCount; i++) {
 
 
 			for (int j = 0; j<i; j++) {
 				System.out.print("0");
 			}
 
-			for (int k = maxcount; k>=i; k--) {
+			for (int k = maxCount; k>=i; k--) {
 				System.out.print("*");
 			}
 
-			for (int k = maxcount; k > i; k--) {
+			for (int k = maxCount; k > i; k--) {
 				System.out.print("*");
 			}
 
@@ -111,12 +121,9 @@ public class LoopHomeWork01 {
 
 			System.out.println("");
 
-		}
+		}//end of for
 
-        
-        System.out.println("-----------------------------------------");
-
-    }
+	}
 
 
 
