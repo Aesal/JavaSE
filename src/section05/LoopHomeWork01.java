@@ -89,6 +89,31 @@ public class LoopHomeWork01 {
     }
 
     public static void Work04(int maxCount) {
+
+        for (int i = 0; i <= maxcount; i++) {
+
+
+			for (int j = 0; j<i; j++) {
+				System.out.print("0");
+			}
+
+			for (int k = maxcount; k>=i; k--) {
+				System.out.print("*");
+			}
+
+			for (int k = maxcount; k > i; k--) {
+				System.out.print("*");
+			}
+
+			for (int j = 0; j<i; j++) {
+				System.out.print("0");
+			}
+
+			System.out.println("");
+
+		}
+
+        
         System.out.println("-----------------------------------------");
 
     }
