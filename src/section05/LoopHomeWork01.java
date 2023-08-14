@@ -123,7 +123,6 @@ public class LoopHomeWork01 {
 			System.out.println("");
 
 		}//end of for
-
 	}
 
 
