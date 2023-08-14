@@ -60,3 +60,103 @@ public void calcTest() {
 
 	}
 
+
+@Test
+	public void calcTest() {
+
+		int[][] iArray = new int[7][7];
+		int iCalc = 1; // ~ 49
+
+		//i 변수 입력 및 확인 ez
+		for (int[] arrSub : iArray){
+
+			for (int i = 0; i <= 6; i++) {
+				arrSub[i] = iCalc++;
+				System.out.printf("%-3d", arrSub[i]);
+
+			}
+			System.out.println("");
+		}
+
+		System.out.println("--------------------");
+
+
+		// 00
+		// 01 10
+		// 20 11 02
+		// 03 12 21 30
+		// 40 31 22 13 04
+
+
+		// 10 01
+		// 02 08
+
+		// 03 12 21 30
+		// 04 10 16 22
+
+		// 05 14 23 32 41 50
+		// 06 12 18 24 30 36
+		// 6
+
+
+
+		//정방향
+		for (int i = 0; i <= 6; i++) {
+			int iCount = i;
+
+			if (i % 2 == 1) {
+
+				for (int j = 0; j <= i; j++) {
+
+					System.out.printf("%-3d",iArray[j][iCount]);
+
+					iCount--;
+
+				}
+			} else {
+				for (int j = 0; j <= i; j++) {
+
+					System.out.printf("%-3d",iArray[iCount][j]);
+
+					iCount--;
+
+				}
+			}
+			System.out.println("");
+		}
+
+		//역방향
+		for (int i = 5; i >= 0; i--) {
+			int iCount = i;
+
+			if (i % 2 == 1) {
+
+				for (int j = 0; j <= i; j++) {
+
+					System.out.printf("%-3d", iArray[j+1][iCount+1]);
+
+					iCount--;
+
+				}
+
+			} else {
+				//합8
+				// 62 53 44 35 26
+				// 45 39 33 27 21
+				// 64 55 46
+				// 47 41 35
+
+
+				for (int j = 0; j <= i; j++) {
+					System.out.println(j + "몇 " + i + "몇 " );
+//					System.out.printf("%-3d",iArray[iCount][j]);
+
+					iCount--;
+
+					System.out.println(iCount+3);
+				}
+			}
+			System.out.println("");
+		}
+
+	}
