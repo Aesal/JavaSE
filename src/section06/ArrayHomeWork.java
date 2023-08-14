@@ -36,3 +36,27 @@ package section06;
 public class ArrayHomeWork {
 
 }
+
+public void calcTest() {
+
+		int[][] iArray = new int[7][7];
+		int iCalc = 1; // ~ 49
+
+
+		//i 변수 입력 및 확인 ez
+			for (int[] arrSub : iArray){
+
+				for (int i = 0; i <= 6; i++) {
+					arrSub[i] = iCalc++;
+					System.out.printf("%-3d", arrSub[i]);
+
+				}
+				System.out.println("");
+			}
+
+		System.out.println("--------------------");
+
+
+
+	}
+
