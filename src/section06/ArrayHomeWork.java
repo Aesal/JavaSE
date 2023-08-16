@@ -1,45 +1,25 @@
-package section06;
-/*
-숙제!
+import org.junit.jupiter.api.Test;
 
- 1  2  3  4  5  6  7		
- 8  9  10 11 12 13 14		
- 15 16 17 18 19 20 21		
- 22 23 24 25 26 27 28		
- 29 30 31 32 33 34 35		
- 36 37 38 39 40 41 42		
- 43 44 45 46 47 48 49	
- 
- 1. 2중배열[7][7] 선언하고 
- 2. for문 1~49까지 대입하기
- 3. 아래 모양으로 출력하기
-
-1 
-2 8 
-15 9 3 
-4 10 16 22 
-29 23 17 11 5 
-6 12 18 24 30 36 
-43 37 31 25 19 13 7 
-14 20 26 32 38 44 
-45 39 33 27 21 
-28 34 40 46 
-47 41 35 
-42 48 
-49 
+	/* ↓ →
+	* 00
+	* 01 10
+	* 20 11 02
+	* 03 12 21 30
+	* 40 31 22 13 04
+	* 05 14 23 32 14 50
+	* 60 51 42 33 24 15 06
+	* 16 25 34 43 52 61
+	* 62 53 44 35 26
+	* 36 45 54 63
+	* 64 55 46
+	* 56 65
+	* 66
+	*/
 
 
-
-
-*/
-
-public class ArrayHomeWork {
-
-}
-
-public static int[][] CreateArr () {
-
-		int iCalc = 1; // ~ 49
+class BoradApplicationTests {
+	public static int[][] createArr () {
+	    int iCalc = 1; // ~ 49
 
 	    int[][] iArray = new int[7][7];
 
@@ -60,13 +40,15 @@ public static int[][] CreateArr () {
 	}
 
 
+
+	//완료1
 	@Test
 	public void testClass() {
 		//배열 생성
-		int[][]arrResult = CreateArr();
+		final int[][] arrResult = createArr();
 
 		//정방향
-		for (int i = 0; i<=6; i++) {
+		for (int i = 0; i <= 6; i++) {
 			int iCount = i;
 
 			for (int j = 0; j <= i; j++) {
@@ -83,7 +65,7 @@ public static int[][] CreateArr () {
 		}
 
 		//역방향
-		for (int i = 0; i<=6; i++) {
+		for (int i = 0; i <= 6; i++) {
 			int iCount = 6;
 
 			for (int j = i; j <= 6; j++) {
@@ -97,7 +79,6 @@ public static int[][] CreateArr () {
 				}
 
 				iCount--;
-
 			}
 			System.out.println("");
 		}
@@ -105,3 +86,4 @@ public static int[][] CreateArr () {
 
 
 
+}
