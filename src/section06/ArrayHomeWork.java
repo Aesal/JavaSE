@@ -41,47 +41,44 @@ class BoradApplicationTests {
 
 
 
-	//완료1
-	@Test
+		@Test
 	public void testClass() {
 		//배열 생성
 		final int[][] arrResult = createArr();
 
-		//정방향
+		String topStr = "", bottomStr = "";
+
+		//메인loop
 		for (int i = 0; i <= 6; i++) {
+			//정방향
 			int iCount = i;
-
 			for (int j = 0; j <= i; j++) {
-
 				if (i % 2 == 0) {
-					System.out.printf("%-3d", arrResult[iCount][j]);
+					topStr += String.format("%-3d", (arrResult[iCount][j]));
 				} else {
-					System.out.printf("%-3d", arrResult[j][iCount]);
+					topStr += String.format("%-3d", (arrResult[j][iCount]));
 				}
-
+				if (j == i) topStr += "\n";
 				iCount--;
 			}
-			if (i != 6) System.out.println("");
-		}
-
-		//역방향
-		for (int i = 0; i <= 6; i++) {
-			int iCount = 6;
-
+			//역방향
+			iCount = 6;
 			for (int j = i; j <= 6; j++) {
-
-				if (i == 0) continue;
+				if (i == 0) break;
 
 				if (i % 2 == 0) {
-					System.out.printf("%-3d", arrResult[iCount][j]);
+					bottomStr += String.format("%-3d", (arrResult[iCount][j]));
 				} else {
-					System.out.printf("%-3d", arrResult[j][iCount]);
+					bottomStr += String.format("%-3d", (arrResult[j][iCount]));
 				}
 
+				if (j == 6) bottomStr += "\n";
 				iCount--;
 			}
-			System.out.println("");
+
 		}
+		//출력
+		System.out.print(topStr+bottomStr);
 	}
 
 
